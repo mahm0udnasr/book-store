@@ -1,0 +1,27 @@
+{
+  "name": "book-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahm0udnasr/book-store.git"
+  },
+  "author": "MahmoudNasr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mahm0udnasr/book-store/issues"
+  },
+  "homepage": "https://github.com/mahm0udnasr/book-store#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
