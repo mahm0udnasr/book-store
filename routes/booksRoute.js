@@ -2,8 +2,9 @@ import express from "express";
 const router = express.Router();
 
 // controller functions
-import { getBooks } from "../controllers/booksControllers.js";
+import { getBooks, addBook } from "../controllers/booksControllers.js";
 
 router.get("/", getBooks);
+router.post("/", addBook);
 
 export default router;
