@@ -30,3 +30,23 @@ export const addBook = (req, res) => {
     });
   });
 };
+
+export const updateBook = (req, res) => {};
+
+export const deleteBook = (req, res) => {
+  const { id } = req.params;
+  const query = "DELETE FROM books WHERE id = ?";
+  db.query(query, [id], (err, data) => {
+    if (err) {
+      return res.status(500).json({ success: false, message: err });
+    }
+    if (data.affectedRows === 0) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Book not found" });
+    }
+    return res
+      .status(200)
+      .json({ success: true, message: "Book deleted successfully" });
+  });
+};
